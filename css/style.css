@@ -1,0 +1,178 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/*
+* MY STYLES
+*/
+
+:root {
+    --clr-light-purple: #e6d6fc;
+    --clr-purple: #883ae1;
+
+    --clr-white: #fff;
+    --clr-cream: #fafaf9;
+    --clr-light-gray: #e5eaf0;
+    --clr-gray: #6c727f;
+    --clr-dark-gray: #20293a;
+}
+
+body,
+h2,
+p {
+    font-family: Sora;
+    font-size: 14px;
+}
+
+body {
+    background: var(--clr-cream);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    background: var(--clr-white);
+    box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
+    max-width: 368px;
+    border-radius: 12px;
+}
+
+.card-main {
+    padding: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--clr-light-gray);
+}
+
+.image {
+    margin-bottom: 16px;
+    border-radius: 12px;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    margin-block: 16px;
+}
+
+.tag {
+    font-size: 0.625rem;
+    color: var(--clr-purple);
+    font-weight: 500;
+    background: var(--clr-light-purple);
+    border-radius: 999px;
+    padding-inline: 16px;
+    padding-block: 4px;
+}
+
+.title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--clr-dark-gray);
+    margin-bottom: 6px;
+}
+
+.summary {
+    font-size: 0.875rem;
+    color: var(--clr-gray);
+}
+
+.card-footer {
+    margin-inline: 16px;
+    margin-block: 20px;
+}
+
+.author {
+    font-size: 0.75rem;
+    color: var(--clr-gray);
+}
